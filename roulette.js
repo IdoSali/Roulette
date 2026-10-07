@@ -193,7 +193,13 @@ function decreaseBet() {
     }
 }
 
-
+function allIn() {
+    if (isSpinning) {
+        alertElement.innerHTML = "No sneaky changes mid-spin! Wait for the next round." 
+        return;
+    }
+    currentBet = Money;
+}
 function increaseBet() {
     if (isSpinning) {
         alertElement.innerHTML = "No sneaky changes mid-spin! Wait for the next round." 
